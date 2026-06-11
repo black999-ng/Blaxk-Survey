@@ -26,5 +26,510 @@
       ],
       "feedback": "Suck a dick"
     }
+  },
+  {
+    "id": "dd0a60df-f14e-4563-9bb6-0b418d9c7596",
+    "submittedAt": "2026-06-11T16:32:41.538Z",
+    "answers": {
+      "full_name": "Ahmad Ahmed",
+      "reg_number": "BUK/2022/001",
+      "level": "300 Level",
+      "marketplace_role": "Both - buy and sell",
+      "buy_what": [
+        "Kitchen items and pots",
+        "Electronics (fans, lights, chargers)",
+        "Textbooks and course books"
+      ],
+      "buy_price": 5,
+      "buy_trust": [
+        "Clear photos of the item",
+        "Can meet them in person"
+      ],
+      "buy_payment": "Secure payment (money held safe)",
+      "sell_what": [
+        "School supplies and pens",
+        "Kitchen items and pots",
+        "Clothes and shoes"
+      ],
+      "sell_concern": [
+        "Not getting paid",
+        "Scam or fraud",
+        "Item condition not matching photos"
+      ],
+      "sell_price": 5,
+      "sell_payment": "Bank transfer or online",
+      "sell_feature": [
+        "Featured listing (show my item first)"
+      ],
+      "marketplace_use": 5,
+      "features_want": [
+        "Chat/messaging with sellers"
+      ],
+      "language": "en"
+    },
+    "googleSheetsSync": null
+  },
+  {
+    "id": "7dd8f1d0-c56d-4bae-aaf6-47c5746c66e3",
+    "submittedAt": "2026-06-11T17:02:31.519Z",
+    "answers": {
+      "full_name": "John Eboh Francis",
+      "reg_number": "EEEE",
+      "level": "200 Level",
+      "marketplace_role": "I want to buy items",
+      "buy_what": [
+        "Textbooks and course books",
+        "Electronics (fans, lights, chargers)"
+      ],
+      "buy_price": 5,
+      "buy_trust": [
+        "Clear photos of the item",
+        "They are a verified student",
+        "Can meet them in person"
+      ],
+      "buy_payment": "Secure payment (money held safe)",
+      "marketplace_use": 5,
+      "features_want": [
+        "Item delivery options",
+        "See seller feedback and ratings",
+        "Wishlist or saved items"
+      ],
+      "feedback": "Nothing",
+      "language": "en"
+    },
+    "googleSheetsSync": null
+  },
+  {
+    "id": "b65644b9-ecc5-433d-b348-40e0072c945a",
+    "submittedAt": "2026-06-11T17:04:52.651Z",
+    "answers": {
+      "full_name": "Blaxk",
+      "reg_number": "new",
+      "level": "200 Level",
+      "marketplace_role": "I want to buy items",
+      "buy_what": [
+        "Textbooks and course books",
+        "Electronics (fans, lights, chargers)"
+      ],
+      "buy_price": 4,
+      "buy_trust": [
+        "They are a verified student",
+        "Can meet them in person"
+      ],
+      "buy_payment": "Secure payment (money held safe)",
+      "marketplace_use": 4,
+      "features_want": [
+        "Buyer protection guarantee",
+        "Chat/messaging with sellers"
+      ],
+      "feedback": "Good work",
+      "language": "en"
+    },
+    "googleSheetsSync": false
+  },
+  {
+    "id": "fb6fd45e-2e0f-4827-9382-4c4246edcde8",
+    "submittedAt": "2026-06-11T17:10:56.989Z",
+    "answers": {
+      "full_name": "New",
+      "reg_number": "Good",
+      "level": "200 Level",
+      "marketplace_role": "I want to buy items",
+      "buy_what": [
+        "Clothes and shoes",
+        "School supplies and pens"
+      ],
+      "buy_price": 4,
+      "buy_trust": [
+        "Clear photos of the item",
+        "They are a verified student"
+      ],
+      "buy_payment": "No preference",
+      "marketplace_use": 4,
+      "features_want": [
+        "Item delivery options",
+        "Commission-free selling"
+      ],
+      "language": "en"
+    },
+    "googleSheetsSync": false
+  },
+  {
+    "id": "fd94b7a3-6b90-4ca4-9837-20ac3f641061",
+    "submittedAt": "2026-06-11T17:19:29.930Z",
+    "answers": {
+      "full_name": "bbb",
+      "reg_number": "asdasdas",
+      "level": "200 Level",
+      "marketplace_role": "I want to sell items",
+      "sell_what": [
+        "Clothes and shoes"
+      ],
+      "sell_concern": [
+        "Not getting paid"
+      ],
+      "sell_price": 4,
+      "sell_payment": "Bank transfer or online",
+      "sell_feature": [
+        "Buyer ratings and reviews"
+      ],
+      "marketplace_use": 4,
+      "features_want": [
+        "See seller feedback and ratings"
+      ],
+      "language": "en"
+    },
+    "googleSheetsSync": false
+  },
+  {
+    "id": "be069986-54e7-444b-9d5a-663d891789a2",
+    "submittedAt": "2026-06-11T17:21:43.848Z",
+    "answers": {
+      "full_name": "ssdadsd",
+      "reg_number": "asdasds",
+      "level": "200 Level",
+      "marketplace_role": "I want to sell items",
+      "sell_what": [
+        "Clothes and shoes"
+      ],
+      "sell_concern": [
+        "Item condition not matching photos"
+      ],
+      "sell_price": 4,
+      "sell_payment": "No preference",
+      "sell_feature": [
+        "Featured listing (show my item first)"
+      ],
+      "marketplace_use": 4,
+      "features_want": [
+        "Item delivery options"
+      ],
+      "language": "en"
+    },
+    "googleSheetsSync": false
+  },
+  {
+    "id": "ca365201-191b-4965-a157-751282ffca15",
+    "submittedAt": "2026-06-11T17:26:03.749Z",
+    "answers": {
+      "full_name": "John",
+      "reg_number": "MMM",
+      "level": "200 Level",
+      "marketplace_role": "I want to buy items",
+      "buy_what": [
+        "Furniture (beds, chairs, tables)"
+      ],
+      "buy_price": 4,
+      "buy_trust": [
+        "They are a verified student"
+      ],
+      "buy_payment": "Online payment or transfer",
+      "marketplace_use": 4,
+      "features_want": [
+        "Item delivery options"
+      ],
+      "language": "en"
+    },
+    "googleSheetsSync": false
+  },
+  {
+    "id": "6609949c-f555-4dfc-8bfc-8a9ae4cde0ba",
+    "submittedAt": "2026-06-11T17:28:12.495Z",
+    "answers": {
+      "full_name": "BBB",
+      "reg_number": "NNASD",
+      "level": "100 Level",
+      "marketplace_role": "I want to buy items",
+      "buy_what": [
+        "Clothes and shoes"
+      ],
+      "buy_price": 4,
+      "buy_trust": [
+        "They are a verified student"
+      ],
+      "buy_payment": "Secure payment (money held safe)",
+      "marketplace_use": 4,
+      "features_want": [
+        "See seller feedback and ratings"
+      ],
+      "language": "en"
+    },
+    "googleSheetsSync": false
+  },
+  {
+    "id": "1633fd80-2722-4aeb-a6ff-9fdde1f2ad8e",
+    "submittedAt": "2026-06-11T17:34:04.173Z",
+    "answers": {
+      "full_name": "NNN",
+      "reg_number": "sda",
+      "level": "200 Level",
+      "marketplace_role": "I want to sell items",
+      "sell_what": [
+        "Clothes and shoes"
+      ],
+      "sell_concern": [
+        "Item condition not matching photos"
+      ],
+      "sell_price": 4,
+      "sell_payment": "Secure payment (money held safe)",
+      "sell_feature": [
+        "Safety tips and guides"
+      ],
+      "marketplace_use": 3,
+      "features_want": [
+        "Item delivery options"
+      ],
+      "language": "en"
+    },
+    "googleSheetsSync": false
+  },
+  {
+    "id": "d318fadb-54e8-4249-9320-8671b6f07f1e",
+    "submittedAt": "2026-06-11T17:36:56.744Z",
+    "answers": {
+      "full_name": "DDD",
+      "reg_number": "SDASDD",
+      "level": "200 Level",
+      "marketplace_role": "I want to buy items",
+      "buy_what": [
+        "Clothes and shoes"
+      ],
+      "buy_price": 3,
+      "buy_trust": [
+        "They are a verified student"
+      ],
+      "buy_payment": "Secure payment (money held safe)",
+      "marketplace_use": 4,
+      "features_want": [
+        "Buyer protection guarantee",
+        "Commission-free selling"
+      ],
+      "language": "en"
+    },
+    "googleSheetsSync": false
+  },
+  {
+    "id": "275beaec-5526-4294-9103-f9fb987a9b8d",
+    "submittedAt": "2026-06-11T17:41:03.667Z",
+    "answers": {
+      "full_name": "nEW",
+      "reg_number": "ASDAS",
+      "level": "400 Level",
+      "marketplace_role": "I want to buy items",
+      "buy_what": [
+        "Clothes and shoes",
+        "Electronics (fans, lights, chargers)"
+      ],
+      "buy_price": 4,
+      "buy_trust": [
+        "They are a verified student"
+      ],
+      "buy_payment": "Online payment or transfer",
+      "marketplace_use": 4,
+      "features_want": [
+        "Item delivery options"
+      ],
+      "language": "en"
+    },
+    "googleSheetsSync": true
+  },
+  {
+    "id": "75204db0-e2a1-46b7-84d5-9819e6667c35",
+    "submittedAt": "2026-06-11T17:46:58.559Z",
+    "answers": {
+      "full_name": "AXSS",
+      "reg_number": "ASAS",
+      "level": "300 Level",
+      "marketplace_role": "I want to buy items",
+      "buy_what": [
+        "Clothes and shoes"
+      ],
+      "buy_price": 3,
+      "buy_trust": [
+        "They are a verified student"
+      ],
+      "buy_payment": "Secure payment (money held safe)",
+      "marketplace_use": 3,
+      "features_want": [
+        "Item delivery options"
+      ],
+      "language": "en"
+    },
+    "googleSheetsSync": true
+  },
+  {
+    "id": "30993189-2af0-448d-9ca9-25bb561abee3",
+    "submittedAt": "2026-06-11T17:48:56.142Z",
+    "answers": {
+      "full_name": "SSDC",
+      "reg_number": "ASDAS",
+      "level": "200 Level",
+      "marketplace_role": "I want to buy items",
+      "buy_what": [
+        "Electronics (fans, lights, chargers)",
+        "Clothes and shoes"
+      ],
+      "buy_price": 4,
+      "buy_trust": [
+        "They are a verified student"
+      ],
+      "buy_payment": "Secure payment (money held safe)",
+      "marketplace_use": 3,
+      "features_want": [
+        "Item delivery options"
+      ],
+      "language": "en"
+    },
+    "googleSheetsSync": true
+  },
+  {
+    "id": "5b495de7-3503-45e0-920c-b4ebd8b3ddba",
+    "submittedAt": "2026-06-11T17:50:15.060Z",
+    "answers": {
+      "full_name": "asds",
+      "reg_number": "asasd",
+      "level": "200 Level",
+      "marketplace_role": "I want to buy items",
+      "buy_what": [
+        "Electronics (fans, lights, chargers)"
+      ],
+      "buy_price": 3,
+      "buy_trust": [
+        "They are a verified student"
+      ],
+      "buy_payment": "Online payment or transfer",
+      "marketplace_use": 3,
+      "features_want": [
+        "Item delivery options"
+      ],
+      "language": "en"
+    },
+    "googleSheetsSync": true
+  },
+  {
+    "id": "7afc0457-13b3-47d5-aa8e-5a81838f0a6e",
+    "submittedAt": "2026-06-11T17:57:31.798Z",
+    "answers": {
+      "full_name": "Booo",
+      "reg_number": "asdas",
+      "level": "200 Level",
+      "marketplace_role": "I want to buy items",
+      "buy_what": [
+        "Electronics (fans, lights, chargers)"
+      ],
+      "buy_price": 3,
+      "buy_trust": [
+        "They are a verified student"
+      ],
+      "buy_payment": "Online payment or transfer",
+      "marketplace_use": 3,
+      "features_want": [
+        "Item delivery options"
+      ],
+      "language": "en"
+    },
+    "googleSheetsSync": true
+  },
+  {
+    "id": "b5094f53-07da-45fd-8385-7282f07e7377",
+    "submittedAt": "2026-06-11T17:58:25.766Z",
+    "answers": {
+      "full_name": "asdad",
+      "reg_number": "asda",
+      "level": "300 Level",
+      "marketplace_role": "I want to buy items",
+      "buy_what": [
+        "Clothes and shoes"
+      ],
+      "buy_price": 3,
+      "buy_trust": [
+        "They are a verified student"
+      ],
+      "buy_payment": "No preference",
+      "marketplace_use": 3,
+      "features_want": [
+        "Item delivery options"
+      ],
+      "language": "en"
+    },
+    "googleSheetsSync": true
+  },
+  {
+    "id": "c10c92f4-5702-4d10-a6f3-cb06388756c3",
+    "submittedAt": "2026-06-11T18:35:23.572Z",
+    "answers": {
+      "full_name": "NNSDA",
+      "reg_number": "ENG/26/MCT/00023",
+      "level": "200 Level",
+      "marketplace_role": "I want to buy items",
+      "buy_what": [
+        "Electronics (fans, lights, chargers)"
+      ],
+      "buy_price": 3,
+      "buy_trust": [
+        "Clear photos of the item"
+      ],
+      "buy_payment": "Online payment or transfer",
+      "marketplace_use": 4,
+      "features_want": [
+        "Commission-free selling"
+      ],
+      "language": "en",
+      "deviceId": "975162bd-d008-4a29-b1a9-dab684de1045"
+    },
+    "deviceId": "975162bd-d008-4a29-b1a9-dab684de1045",
+    "googleSheetsSync": true
+  },
+  {
+    "id": "71c4f5a1-8303-478b-a672-fa1782f9a5b4",
+    "submittedAt": "2026-06-11T18:47:29.593Z",
+    "answers": {
+      "full_name": "NEe",
+      "reg_number": "ABC/12/MCS/00021",
+      "level": "200 Level",
+      "marketplace_role": "I want to buy items",
+      "buy_what": [
+        "Electronics (fans, lights, chargers)"
+      ],
+      "buy_price": 3,
+      "buy_trust": [
+        "Clear photos of the item"
+      ],
+      "buy_payment": "Cash when we meet",
+      "marketplace_use": 3,
+      "features_want": [
+        "Item delivery options"
+      ],
+      "language": "en",
+      "deviceId": "7594043f-66b2-44ec-9367-4643d8ee70ee"
+    },
+    "deviceId": "7594043f-66b2-44ec-9367-4643d8ee70ee",
+    "googleSheetsSync": true
+  },
+  {
+    "id": "8bc157e1-554e-4e8a-b78e-3dd40a1a03be",
+    "submittedAt": "2026-06-11T18:51:41.909Z",
+    "answers": {
+      "full_name": "AWDas",
+      "reg_number": "ENG/24/MCT/00029",
+      "level": "200 Level",
+      "marketplace_role": "I want to buy items",
+      "buy_what": [
+        "Clothes and shoes"
+      ],
+      "buy_price": 4,
+      "buy_trust": [
+        "They are a verified student"
+      ],
+      "buy_payment": "Secure payment (money held safe)",
+      "marketplace_use": 4,
+      "features_want": [
+        "Item delivery options"
+      ],
+      "language": "en",
+      "deviceId": "4f334a3d-9957-465f-9ece-78097b1ed4c1"
+    },
+    "deviceId": "4f334a3d-9957-465f-9ece-78097b1ed4c1",
+    "googleSheetsSync": true
   }
 ]

@@ -25,12 +25,74 @@ body {
   }
 }
 
+@keyframes scaleInUp {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes smoothPulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes confetti {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) rotate(720deg);
+    opacity: 0;
+  }
+}
+
 .animate-fade-slide-in {
-  animation: fadeSlideIn 0.35s ease forwards;
+  animation: fadeSlideIn 0.4s ease-out forwards;
+}
+
+.animate-scale-in-up {
+  animation: scaleInUp 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-slide-in-up {
+  animation: slideInUp 0.5s ease-out forwards;
+}
+
+.animate-smooth-pulse {
+  animation: smoothPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-confetti {
+  animation: confetti 2s ease-out forwards;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .animate-fade-slide-in {
+  .animate-fade-slide-in,
+  .animate-scale-in-up,
+  .animate-slide-in-up,
+  .animate-smooth-pulse,
+  .animate-confetti {
     animation: none;
   }
 }

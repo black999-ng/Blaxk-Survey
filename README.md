@@ -1,4 +1,4 @@
-# BUK Housing — Feature Survey
+# BUK Developer — Marketplace Survey
 
 A clean, step-by-step survey to gauge student interest in a Marketplace feature. Built with **Next.js 14 (App Router)**, **Tailwind CSS**, and a serverless API route that saves every submission to `src/data/responses.json`.
 
@@ -34,7 +34,7 @@ Open [http://localhost:3000](http://localhost:3000).
 >
 > **Recommended fix for production:** Replace the file-write logic in `src/app/api/submit/route.ts` with one of:
 > - **Vercel KV** (Redis-based, simplest): `await kv.rpush('responses', JSON.stringify(entry))`
-> - **Supabase** (Postgres, since you already use it on BUK Housing): insert into a `survey_responses` table
+> - **Supabase** (Postgres, since you already use it on the BUK Developer marketplace): insert into a `survey_responses` table
 > - **MongoDB Atlas** free tier
 >
 > For local testing and development, the JSON file approach works perfectly.
