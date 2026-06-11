@@ -1,0 +1,30 @@
+[
+  {
+    "id": "36b5846a-829a-4752-9e26-33f5764ecd7c",
+    "submittedAt": "2026-06-11T13:37:13.803Z",
+    "answers": {
+      "role": "Student at BUK",
+      "marketplace_need": "No — I wouldn't use it at all",
+      "marketplace_items": [
+        "Electronics (fans, lamps, chargers)",
+        "Textbooks & course materials",
+        "Clothing & accessories",
+        "Kitchen items & appliances"
+      ],
+      "priority": 4,
+      "trust_concerns": [
+        "Verified student/BUK ID on seller profiles",
+        "Ratings & reviews for buyers and sellers",
+        "Ability to report suspicious listings"
+      ],
+      "payment_preference": "In-app payment (card / bank transfer)",
+      "extra_features": [
+        "Roommate matching",
+        "Virtual tours of properties",
+        "Landlord ratings & reviews",
+        "Rent payment tracking"
+      ],
+      "feedback": "Suck a dick"
+    }
+  }
+]
