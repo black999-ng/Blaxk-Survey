@@ -51,6 +51,19 @@ function getDeviceId(request: Request, bodyDeviceId?: string) {
   return deviceId && deviceId.length > 0 ? deviceId : null
 }
 
+function getSheetTitleForRole(role?: string) {
+  const normalized = (role || '').toLowerCase().trim()
+  let sheetTitle = 'Buyers'
+  if (normalized.includes('both')) {
+    sheetTitle = 'Both'
+  } else if (normalized.includes('sell')) {
+    sheetTitle = 'Sellers'
+  } else if (normalized.includes('buy')) {
+    sheetTitle = 'Buyers'
+  }
+  return sheetTitle
+}
+
 async function appendToGoogleSheet(data: Record<string, any>) {
   try {
     // Check if credentials are available
@@ -89,6 +102,16 @@ async function appendToGoogleSheet(data: Record<string, any>) {
       'feedback': data.feedback || '',
     }
 
+    // Sanitize all values for Google Sheets: arrays must be strings and null/undefined should be empty
+    for (const key of Object.keys(flatData)) {
+      const val = flatData[key]
+      if (Array.isArray(val)) {
+        flatData[key] = val.join('; ')
+      } else if (val === null || val === undefined) {
+        flatData[key] = ''
+      }
+    }
+
     const headers = Object.keys(flatData)
 
     // Initialize sheet
@@ -96,10 +119,11 @@ async function appendToGoogleSheet(data: Record<string, any>) {
     const doc = new GoogleSpreadsheet(sheetId, auth)
     await doc.loadInfo()
 
-    let sheet = doc.sheetsByTitle['Responses']
+    const sheetTitle = getSheetTitleForRole(data.marketplace_role)
+    let sheet = doc.sheetsByTitle[sheetTitle]
     if (!sheet) {
       // Sheet doesn't exist, create it with headers
-      sheet = await doc.addSheet({ title: 'Responses', headerValues: headers })
+      sheet = await doc.addSheet({ title: sheetTitle, headerValues: headers })
     } else {
       // Sheet exists, try to load headers; if none, set them
       try {

@@ -313,15 +313,17 @@ export default function Survey() {
 
   // Build questions array based on role
   const questionsArray = useCallback(() => {
-    const role = answers.marketplace_role as string | undefined
+    const role = (answers.marketplace_role as string | undefined || '').toLowerCase().trim()
+    const isBuyer = role.includes('buy')
+    const isSeller = role.includes('sell')
+    const isBoth = role.includes('both')
+
     let qs: Question[] = [...setupQuestions]
-    
-    if (role?.includes('buy')) qs = [...qs, ...buyerQuestions]
-    if (role?.includes('sell')) qs = [...qs, ...sellerQuestions]
-    
+    if (isBuyer || isBoth) qs = [...qs, ...buyerQuestions]
+    if (isSeller || isBoth) qs = [...qs, ...sellerQuestions]
     qs = [...qs, ...generalQuestions]
     return qs
-  }, [answers])
+  }, [answers.marketplace_role])
 
   const allQuestions = questionsArray()
   const currentQ = step > 0 && step <= allQuestions.length ? allQuestions[step - 1] : null

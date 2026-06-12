@@ -531,5 +531,146 @@
     },
     "deviceId": "4f334a3d-9957-465f-9ece-78097b1ed4c1",
     "googleSheetsSync": true
+  },
+  {
+    "id": "6f916045-2fcc-463c-ab69-104ab5feb553",
+    "submittedAt": "2026-06-12T10:37:45.276Z",
+    "answers": {
+      "full_name": "asdfasd",
+      "reg_number": "ENG/24/MCT/00029",
+      "level": "200 Level",
+      "marketplace_role": "I want to sell items",
+      "sell_what": [
+        "Textbooks and course books",
+        "School supplies and pens"
+      ],
+      "sell_concern": [
+        "Scam or fraud",
+        "Item condition not matching photos"
+      ],
+      "sell_price": 4,
+      "sell_payment": "No preference",
+      "sell_feature": [
+        "Buyer ratings and reviews"
+      ],
+      "marketplace_use": 4,
+      "features_want": [
+        "Item delivery options"
+      ],
+      "language": "en",
+      "deviceId": "f6ab0d21-2711-44e9-afcb-d01cc9728f8b"
+    },
+    "deviceId": "f6ab0d21-2711-44e9-afcb-d01cc9728f8b",
+    "googleSheetsSync": false
+  },
+  {
+    "id": "0acde276-ffa9-472e-a27b-d213ecdb6815",
+    "submittedAt": "2026-06-12T10:44:22.665Z",
+    "answers": {
+      "full_name": "nn",
+      "reg_number": "ENG/24/MCT/00029",
+      "level": "300 Level",
+      "marketplace_role": "Both - buy and sell",
+      "buy_what": [
+        "Clothes and shoes",
+        "Kitchen items and pots"
+      ],
+      "buy_price": 4,
+      "buy_trust": [
+        "Clear photos of the item"
+      ],
+      "buy_payment": "Online payment or transfer",
+      "sell_what": [
+        "Electronics (fans, lights, chargers)",
+        "Kitchen items and pots"
+      ],
+      "sell_concern": [
+        "Scam or fraud",
+        "Safety when meeting buyers"
+      ],
+      "sell_price": 4,
+      "sell_payment": "Cash when we meet",
+      "sell_feature": [
+        "Private messaging with buyers",
+        "Buyer ratings and reviews"
+      ],
+      "marketplace_use": 4,
+      "features_want": [
+        "See seller feedback and ratings"
+      ],
+      "language": "en",
+      "deviceId": "105c317b-9759-4ac8-85f2-6c5fa44e2a66"
+    },
+    "deviceId": "105c317b-9759-4ac8-85f2-6c5fa44e2a66",
+    "googleSheetsSync": false
+  },
+  {
+    "id": "af9b2829-7393-4f9d-b63f-832b0fe87429",
+    "submittedAt": "2026-06-12T10:45:46.671Z",
+    "answers": {
+      "full_name": "dsa",
+      "reg_number": "ENG/24/MCT/00029",
+      "level": "200 Level",
+      "marketplace_role": "I want to sell items",
+      "sell_what": [
+        "Electronics (fans, lights, chargers)"
+      ],
+      "sell_concern": [
+        "Safety when meeting buyers"
+      ],
+      "sell_price": 4,
+      "sell_payment": "Bank transfer or online",
+      "sell_feature": [
+        "Buyer ratings and reviews"
+      ],
+      "marketplace_use": 4,
+      "features_want": [
+        "See seller feedback and ratings"
+      ],
+      "language": "en",
+      "deviceId": "6000a24f-85f4-4b81-9dbd-a57b19ce057d"
+    },
+    "deviceId": "6000a24f-85f4-4b81-9dbd-a57b19ce057d",
+    "googleSheetsSync": false
+  },
+  {
+    "id": "1126aa8b-06b5-4b3d-a91d-974c5b15a815",
+    "submittedAt": "2026-06-12T10:48:58.011Z",
+    "answers": {
+      "full_name": "asd",
+      "reg_number": "ENG/24/MCT/00029",
+      "level": "400 Level",
+      "marketplace_role": "Both - buy and sell",
+      "buy_what": [
+        "School supplies and pens",
+        "Electronics (fans, lights, chargers)"
+      ],
+      "buy_price": 4,
+      "buy_trust": [
+        "Clear photos of the item"
+      ],
+      "buy_payment": "Secure payment (money held safe)",
+      "sell_what": [
+        "Electronics (fans, lights, chargers)",
+        "Kitchen items and pots"
+      ],
+      "sell_concern": [
+        "Scam or fraud"
+      ],
+      "sell_price": 4,
+      "sell_payment": "No preference",
+      "sell_feature": [
+        "Featured listing (show my item first)",
+        "Private messaging with buyers"
+      ],
+      "marketplace_use": 4,
+      "features_want": [
+        "See seller feedback and ratings"
+      ],
+      "language": "en",
+      "deviceId": "8535c29e-1aa9-43ba-91d9-8093e45e277c"
+    },
+    "deviceId": "8535c29e-1aa9-43ba-91d9-8093e45e277c",
+    "googleSheetsSync": true
   }
 ]
