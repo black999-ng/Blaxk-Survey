@@ -29,11 +29,11 @@ export const setupQuestions: Question[] = [
     required: true,
   },
   {
-    id: 'reg_number',
+    id: 'phone_number',
     type: 'text',
-    question: { en: 'What is your registration number?', ha: 'Menene lambar komarya?' },
-    subtext: { en: 'Your student ID or registration number', ha: 'Lambar ɗalibi ko lambar komarya' },
-    required: true,
+    question: { en: 'Phone Number (Optional)', ha: 'Lambar Waya (Ba a mahimmanci)' },
+    subtext: { en: 'Provide your phone number so we can reach you', ha: 'Samar da lambar waya ka don mu iya tunkarar ka' },
+    required: false,
   },
   {
     id: 'level',

@@ -84,7 +84,7 @@ async function appendToGoogleSheet(data: Record<string, any>) {
     const flatData: Record<string, any> = {
       Timestamp: new Date().toISOString(),
       'Student Name': data.full_name || '',
-      'Registration Number': data.reg_number || '',
+      'Phone Number': data.phone_number || '',
       'Level': data.level || '',
       'Role': data.marketplace_role || '',
       'Language': data.language || 'en',

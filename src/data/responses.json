@@ -672,5 +672,36 @@
     },
     "deviceId": "8535c29e-1aa9-43ba-91d9-8093e45e277c",
     "googleSheetsSync": true
+  },
+  {
+    "id": "fcaab8b4-5ecd-4715-8a96-60398cca833b",
+    "submittedAt": "2026-06-18T08:59:51.082Z",
+    "answers": {
+      "full_name": "nnnn",
+      "phone_number": "1234341231122",
+      "level": "300 Level",
+      "marketplace_role": "I want to buy items",
+      "buy_what": [
+        "Furniture (beds, chairs, tables)",
+        "Kitchen items and pots",
+        "Clothes and shoes"
+      ],
+      "buy_price": 4,
+      "buy_trust": [
+        "They are a verified student"
+      ],
+      "buy_payment": "Secure payment (money held safe)",
+      "marketplace_use": 4,
+      "features_want": [
+        "Item delivery options",
+        "Chat/messaging with sellers",
+        "Commission-free selling"
+      ],
+      "feedback": "nnn",
+      "language": "en",
+      "deviceId": "87bd37c1-23fd-47aa-a5b6-0f4ca5ce0197"
+    },
+    "deviceId": "87bd37c1-23fd-47aa-a5b6-0f4ca5ce0197",
+    "googleSheetsSync": false
   }
 ]

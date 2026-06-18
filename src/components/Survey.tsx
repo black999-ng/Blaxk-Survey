@@ -259,7 +259,7 @@ function ThankYou({ language }: { language: Language }) {
           {language === 'en' ? 'BUK Developer — Marketplace Survey' : 'BUK Developer — Tambayar Kasuwa'}
         </div>
         <a
-          href="https://wa.me/09131294991?text=Hello%20Blaxk,%20I%20am%20interested%20in%20the%20BUK%20Marketplace.%20Let's%20work%20together!"
+          href="https://whatsapp.com/channel/0029VbANm8zInlqHc6w6fU14"
           target="_blank"
           rel="noreferrer"
           className="inline-flex items-center gap-2 rounded-full bg-[#1B4FD8] px-4 py-2 text-white text-xs font-semibold hover:bg-[#1440B0] transition-colors duration-200"
@@ -268,7 +268,7 @@ function ThankYou({ language }: { language: Language }) {
             <path d="M20.5 3.5A11.8 11.8 0 0012 1C6.48 1 1.96 4.87 1.14 10.11a11.9 11.9 0 001.64 8.07L1 23l4.96-1.25a11.93 11.93 0 005.08 1.15h.01c5.55 0 10.18-3.83 11.2-9.05.39-1.84.12-3.75-.75-5.45zM12 20.75c-1.61 0-3.2-.4-4.57-1.16l-.33-.18-2.94.74.78-2.83-.21-.35A8.7 8.7 0 013.25 10.13c.71-4.1 4.23-7.08 8.5-7.08 4.74 0 8.61 3.86 8.61 8.61 0 4.63-3.74 8.38-8.38 8.38z" />
             <path d="M7.77 8.43c-.19-.64.41-1.26 1.08-1.02.68.24 1.91.88 2.2 1.01.28.12.5.16.73-.13.24-.3.9-1.03 1.1-1.24.19-.22.36-.24.65-.09.29.15 1.24.45 1.45.54.22.1.38.15.42.24.04.09.04.55.03.9-.02.35-.11.57-.25.77-.14.2-.29.45-.42.63-.14.18-.28.19-.51.06-.23-.14-.96-.35-1.64-.6-.68-.24-1.26-.36-1.45-.36-.2 0-.35.02-.53.22-.18.19-.69.72-.69 1.74 0 1.02.71 1.27.81 1.35.1.08 1.4 2.1 3.4 2.95 2 .84 2 .56 2.35.52.35-.04 1.14-.44 1.3-.87.16-.44.16-.82.11-.9-.05-.08-.17-.12-.36-.2-.19-.08-1.15-.58-1.33-.64-.18-.07-.31-.1-.44.1-.12.19-.48.64-.59.77-.12.13-.23.15-.43.05-.2-.1-.86-.32-1.63-.99-.6-.5-1.01-1.12-1.13-1.32-.11-.2-.01-.31.09-.4.09-.09.2-.23.31-.34.1-.12.14-.2.2-.33.07-.13.03-.24-.02-.34-.05-.1-.44-1.07-.6-1.47-.16-.39-.32-.34-.44-.35-.12-.01-.26-.01-.4-.01s-.34.05-.51.23c-.17.17-.67.66-.67 1.61 0 .95.69 1.87.78 2.01.09.13 1.35 2.1 3.28 2.96.96.43 1.72.69 2.31.88.97.29 1.85.25 2.55.15.78-.12 2.4-.98 2.74-1.93.34-.96.34-1.78.24-1.95-.1-.17-.37-.27-.77-.45-.4-.18-2.37-1.16-2.45-1.23-.09-.07-.15-.19-.07-.38.08-.19.3-.63.42-.86.12-.22.25-.24.42-.24.17 0 .35 0 .53.01.18.02.38.03.55.03.18 0 .46-.07.7-.38.24-.3.97-1.12 1.09-1.34.12-.22.02-.41-.1-.54-.12-.12-1.21-1.15-1.75-1.57-.54-.42-1-.32-1.25-.28-.25.04-.53.18-.82.47-.29.29-1.1 1.07-1.1 2.61 0 1.54-.03 1.75-.14 1.87-.12.12-.25.2-.49.12-.24-.08-1.64-.6-3.12-1.92-.51-.43-.85-.95-1.03-1.29z" />
           </svg>
-          {language === 'en' ? 'Send me a WhatsApp DM' : 'Aiko min da DM a WhatsApp'}
+          {language === 'en' ? 'Join our WhatsApp Channel' : 'Shiga Channelin Mu na WhatsApp'}
         </a>
       </div>
     </div>
@@ -330,10 +330,6 @@ export default function Survey() {
   const totalSteps = allQuestions.length
   const currentAnswer = currentQ ? answers[currentQ.id] : undefined
 
-  const regNumberPattern = /^[A-Z]{2,5}\/\d{2}\/[A-Z]{2,5}\/\d{3,6}$/i
-  const isRegNumberValid = (value: unknown) =>
-    typeof value === 'string' && regNumberPattern.test(value.trim())
-
   const isAnswered = useCallback(() => {
     if (!currentQ) return false
     
@@ -354,9 +350,6 @@ export default function Survey() {
       // Text fields only required if marked as required
       if (!currentQ.required) return true
       const ans = answers[currentQ.id]
-      if (currentQ.id === 'reg_number') {
-        return isRegNumberValid(ans)
-      }
       return typeof ans === 'string' && ans.trim().length > 0
     }
     return false
@@ -617,19 +610,11 @@ export default function Survey() {
                   />
                 )}
                 {currentQ.type === 'text' && (
-                  <>
-                    <TextInput
-                      value={(currentAnswer as string) ?? ''}
-                      onChange={handleAnswer}
-                      placeholder={language === 'en' ? 'Type your thoughts here…' : 'Rubuta ra\'ayin ka a nan…'}
-                    />
-                    {currentQ.id === 'reg_number' && typeof currentAnswer === 'string' && currentAnswer.trim().length > 0 && !isRegNumberValid(currentAnswer) && (
-                      <p className="mt-3 text-sm text-orange-600">{language === 'en'
-                        ? 'Please enter your registration number in FCT/YR/DPT/NUMBER format, e.g. ENG/24/MCT/00029.'
-                        : 'Da fatan za a shigar da lambar komarya cikin tsarin FCT/YR/DPT/NUMBER, misali ENG/24/MCT/00029.'
-                      }</p>
-                    )}
-                  </>
+                  <TextInput
+                    value={(currentAnswer as string) ?? ''}
+                    onChange={handleAnswer}
+                    placeholder={language === 'en' ? 'Type your thoughts here…' : 'Rubuta ra\'ayin ka a nan…'}
+                  />
                 )}
               </div>
             )}
