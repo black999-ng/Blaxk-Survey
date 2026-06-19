@@ -29,7 +29,7 @@ export const setupQuestions: Question[] = [
     required: true,
   },
   {
-    id: 'phone_number',
+    id: 'reg_number',
     type: 'text',
     question: { en: 'Phone Number (Optional)', ha: 'Lambar Waya (Ba a mahimmanci)' },
     subtext: { en: 'Provide your phone number so we can reach you', ha: 'Samar da lambar waya ka don mu iya tunkarar ka' },

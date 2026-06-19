@@ -367,6 +367,21 @@ export default function Survey() {
     return value[language]
   }
 
+  const getPlaceholderForQuestion = (q: Question) => {
+    // Custom placeholders per question id
+    if (!q) return language === 'en' ? 'Type your thoughts here…' : "Rubuta ra'ayin ka a nan…"
+    if (q.id === 'full_name') return language === 'en' ? 'Enter your name' : 'Shigar da sunanka'
+    if (q.id === 'reg_number') return language === 'en' ? 'Enter phone or reg number (e.g., +2348012345678)' : 'Shigar da lambar waya ko reg (misali +2348012345678)'
+    if (q.id === 'feedback') return language === 'en' ? 'Anything else? Share your thoughts...' : 'Sauran bayani? Rubuta ra\'ayin ka...'
+    return language === 'en' ? 'Type your thoughts here…' : "Rubuta ra'ayin ka a nan…"
+  }
+
+  const isValidNigerianPhone = (phone: string) => {
+    if (!phone) return false
+    const digits = phone.replace(/\D/g, '')
+    return (digits.length === 11 && digits.startsWith('0')) || /^234\d{10}$/.test(digits)
+  }
+
   const goNext = async () => {
     if (step === -1) {
       setStep(0)
@@ -392,11 +407,25 @@ export default function Survey() {
     setError(null)
     try {
       const payloadDeviceId = deviceId || (typeof window !== 'undefined' ? localStorage.getItem('survey_device_id') : null)
+
+      // Client-side phone validation (Nigerian numbers only)
+      const phoneVal = (answers.reg_number as string | undefined) || ''
+      if (phoneVal && phoneVal.trim().length > 0 && !isValidNigerianPhone(phoneVal)) {
+        setError(language === 'en'
+          ? 'Please enter a valid Nigerian phone number (e.g. 08012345678 or +2348012345678).'
+          : "Don shigar da lambar waya ta Najeriya mai inganci (misali 08012345678 ko +2348012345678)."
+        )
+        setSubmitting(false)
+        return
+      }
+
       const res = await fetch('/api/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...answers, language, deviceId: payloadDeviceId }),
       })
+
+      const data = await res.json().catch(() => ({})) as any
 
       if (res.status === 409) {
         localStorage.setItem('survey_submitted', 'true')
@@ -404,7 +433,25 @@ export default function Survey() {
         return
       }
 
-      if (!res.ok) throw new Error('Server error')
+      if (!res.ok) {
+        // surface validation errors from server when available
+        if (data && data.missing && Array.isArray(data.missing)) {
+          // If server reports reg_number_invalid, show a specific message
+          if (data.missing.includes('reg_number_invalid')) {
+            setError(language === 'en'
+              ? 'Please enter a valid Nigerian phone number.'
+              : 'Don shigar da lambar waya ta Najeriya mai inganci.'
+            )
+          } else {
+            setError(language === 'en' ? 'Please complete the highlighted fields.' : 'Don cikakken bayanai da ake bukata.')
+          }
+        } else if (data && data.error) {
+          setError(data.error)
+        } else {
+          throw new Error('Server error')
+        }
+        return
+      }
 
       localStorage.setItem('survey_submitted', 'true')
       if (payloadDeviceId) {
@@ -613,7 +660,7 @@ export default function Survey() {
                   <TextInput
                     value={(currentAnswer as string) ?? ''}
                     onChange={handleAnswer}
-                    placeholder={language === 'en' ? 'Type your thoughts here…' : 'Rubuta ra\'ayin ka a nan…'}
+                    placeholder={getPlaceholderForQuestion(currentQ)}
                   />
                 )}
               </div>

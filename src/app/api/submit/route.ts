@@ -3,6 +3,7 @@ import fs from 'fs'
 import path from 'path'
 import { GoogleSpreadsheet } from 'google-spreadsheet'
 import { JWT } from 'google-auth-library'
+import { getAllQuestions } from '@/data/questions'
 
 const DATA_FILE = path.join(process.cwd(), 'src', 'data', 'responses.json')
 const DEVICE_COOKIE_NAME = 'survey_device_id'
@@ -81,10 +82,15 @@ async function appendToGoogleSheet(data: Record<string, any>) {
     })
 
     // Flatten the data structure for the spreadsheet
+    const regValue = data.reg_number || data.phone_number || ''
     const flatData: Record<string, any> = {
       Timestamp: new Date().toISOString(),
       'Student Name': data.full_name || '',
+      // Keep Phone Number for backward compatibility, prefer explicit phone field
       'Phone Number': data.phone_number || '',
+      // Add Reg Number (human friendly) and reg_number (snake_case) to match existing sheets
+      'Reg Number': regValue,
+      reg_number: regValue,
       'Level': data.level || '',
       'Role': data.marketplace_role || '',
       'Language': data.language || 'en',
@@ -143,11 +149,49 @@ async function appendToGoogleSheet(data: Record<string, any>) {
   }
 }
 
+function validateSubmission(body: Record<string, any>) {
+  try {
+    const roleRaw = (body.marketplace_role as string | undefined) || ''
+    const role = roleRaw.toLowerCase().includes('sell') ? 'seller' : roleRaw.toLowerCase().includes('buy') ? 'buyer' : roleRaw.toLowerCase().includes('both') ? 'both' : ''
+    const requiredQuestions = getAllQuestions('en', role).filter((q) => q.required)
+    const missing: string[] = []
+
+    for (const q of requiredQuestions) {
+      const val = body[q.id]
+      if (q.type === 'text' || q.type === 'single') {
+        if (typeof val !== 'string' || val.trim().length === 0) missing.push(q.id)
+      } else if (q.type === 'multi') {
+        if (!Array.isArray(val) || val.length === 0) missing.push(q.id)
+      } else if (q.type === 'scale') {
+        if (typeof val !== 'number') missing.push(q.id)
+      }
+    }
+
+    // If reg_number (phone) provided, validate Nigerian formats
+    const phoneRaw = (body.reg_number as string | undefined) || ''
+    const phoneDigits = phoneRaw.replace(/\D/g, '')
+    const isValidPhone = (phoneDigits.length === 11 && phoneDigits.startsWith('0')) || /^234\d{10}$/.test(phoneDigits)
+    if (phoneRaw && phoneRaw.trim().length > 0 && !isValidPhone) {
+      missing.push('reg_number_invalid')
+    }
+
+    return missing
+  } catch (e) {
+    return ['validation_failed']
+  }
+}
+
 export async function POST(request: Request) {
   try {
     const body = await request.json()
     const payloadDeviceId = typeof body.deviceId === 'string' ? body.deviceId : undefined
     const deviceId = getDeviceId(request, payloadDeviceId) || crypto.randomUUID()
+
+    // Validate required fields based on questions and selected role
+    const missing = validateSubmission(body)
+    if (missing && missing.length > 0) {
+      return NextResponse.json({ success: false, error: 'Validation failed', missing }, { status: 400 })
+    }
 
     // Always save locally as backup
     const responses = readResponses()

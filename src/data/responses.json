@@ -703,5 +703,85 @@
     },
     "deviceId": "87bd37c1-23fd-47aa-a5b6-0f4ca5ce0197",
     "googleSheetsSync": false
+  },
+  {
+    "id": "c03e549b-40a1-413f-9482-62c8bf6a16cb",
+    "submittedAt": "2026-06-18T09:27:53.126Z",
+    "answers": {
+      "full_name": "Blaxk the creator",
+      "phone_number": "09131294991 ",
+      "level": "300 Level",
+      "marketplace_role": "Both - buy and sell",
+      "buy_what": [
+        "Electronics (fans, lights, chargers)",
+        "School supplies and pens"
+      ],
+      "buy_price": 4,
+      "buy_trust": [
+        "Item description is clear"
+      ],
+      "buy_payment": "Secure payment (money held safe)",
+      "sell_what": [
+        "Kitchen items and pots",
+        "Other household things"
+      ],
+      "sell_concern": [
+        "Not having enough buyers"
+      ],
+      "sell_price": 4,
+      "sell_payment": "No preference",
+      "sell_feature": [
+        "Buyer ratings and reviews"
+      ],
+      "marketplace_use": 5,
+      "features_want": [
+        "Item delivery options"
+      ],
+      "feedback": "Gambare",
+      "language": "en",
+      "deviceId": "5a991e01-c00e-4756-9b7b-9f891206e2a7"
+    },
+    "deviceId": "5a991e01-c00e-4756-9b7b-9f891206e2a7",
+    "googleSheetsSync": true
+  },
+  {
+    "id": "539af735-039e-47b7-9064-35263f4383c1",
+    "submittedAt": "2026-06-18T09:34:25.046Z",
+    "answers": {
+      "full_name": "12312",
+      "reg_number": "1212132",
+      "level": "200 Level",
+      "marketplace_role": "Both - buy and sell",
+      "buy_what": [
+        "School supplies and pens",
+        "Electronics (fans, lights, chargers)"
+      ],
+      "buy_price": 4,
+      "buy_trust": [
+        "They are a verified student"
+      ],
+      "buy_payment": "Secure payment (money held safe)",
+      "sell_what": [
+        "Clothes and shoes"
+      ],
+      "sell_concern": [
+        "Scam or fraud",
+        "Item condition not matching photos"
+      ],
+      "sell_price": 4,
+      "sell_payment": "Secure payment (money held safe)",
+      "sell_feature": [
+        "Buyer ratings and reviews"
+      ],
+      "marketplace_use": 4,
+      "features_want": [
+        "Item delivery options"
+      ],
+      "feedback": "NBA ",
+      "language": "en",
+      "deviceId": "49a6aa44-ae3f-41a8-a93f-ec5d65c59660"
+    },
+    "deviceId": "49a6aa44-ae3f-41a8-a93f-ec5d65c59660",
+    "googleSheetsSync": true
   }
 ]
